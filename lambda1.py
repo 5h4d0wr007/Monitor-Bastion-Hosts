@@ -135,4 +135,3 @@ def sendSlackAlert(slackPayload):
     http = urllib3.PoolManager()
     response = http.request('POST', slackWebhookUrl, headers={'Content-Type': 'application/json'}, body=slackPayload)
     print("Slack alert sent successfully")
-    print(response.data) 
